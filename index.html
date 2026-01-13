@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Snake Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="game-container">
+    <h1>🐍 Snake Game</h1>
+
+    <!-- Score Board -->
+    <div id="score-board">
+      Score: <span id="score">0</span> |
+      High Score: <span id="high-score">0</span>
+    </div>
+
+    <!-- Difficulty -->
+    <div class="controls">
+      Difficulty:
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button id="pause-btn">⏸ Pause</button>
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="game" width="400" height="400"></canvas>
+
+    <!-- Game Over Overlay -->
+    <div id="overlay">
+      <h2>Game Over</h2>
+      <p>Press <b>ENTER</b> to restart</p>
+    </div>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="eat-sound" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg"></audio>
+  <audio id="gameover-sound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
